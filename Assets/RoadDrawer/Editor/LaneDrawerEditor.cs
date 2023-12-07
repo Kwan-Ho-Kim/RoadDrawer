@@ -1,13 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-// using log4net.Util;
 
-// using Barmetler.RoadSystem;
-// using NUnit.Framework;
-// using PlasticPipe.PlasticProtocol.Messages;
-// using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -19,7 +13,6 @@ using UnityEngine;
 [CanEditMultipleObjects]
 public class LaneDrawerEditor : Editor
 {
-    // public MyRoad road { get; private set; }
 
     SerializedProperty item1;
     SerializedProperty item2;
@@ -45,6 +38,8 @@ public class LaneDrawerEditor : Editor
         item3 = serializedObject.FindProperty("Others");
         item4 = serializedObject.FindProperty("Segments");
         item5 = serializedObject.FindProperty("segment_scale");
+
+        
         
 
     }

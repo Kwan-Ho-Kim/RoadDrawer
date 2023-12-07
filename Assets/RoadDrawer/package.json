@@ -1,4 +1,12 @@
 {
-  "name": "com.unity.example",
-  "version": "1.2.3"
+    "name": "com.kkh.road-drawer",
+    "version": "0.0.1",
+    "displayName": "RoadDrawer",
+    "description": "",
+    "unity": "2021.3",
+    "keywords": [
+        "digital twin",
+        "metaverse",
+        "automation"
+    ]
 }

@@ -252,7 +252,7 @@ public class LaneDrawerEditor : Editor
 
                     newLaneModule.transform.position = node.transform.position + lane_direction/lane_direction.magnitude * segment_scale * (1 + 4 * j) / 2;
                     newLaneModule.transform.rotation = Quaternion.LookRotation(lane_direction);
-                    newLaneModule.transform.localScale = new Vector3(newLaneModule.transform.localScale.x, newLaneModule.transform.localScale.y, segment_scale);
+                    newLaneModule.transform.localScale = new Vector3(newLaneModule.transform.localScale.x, newLaneModule.transform.localScale.y, -segment_scale);
 
                     Undo.RegisterCreatedObjectUndo(newLaneModule, "Create New Object");
                 }
@@ -323,7 +323,7 @@ public class LaneDrawerEditor : Editor
                         {
                             Vector3 lane_direction =  parent_lane.transform.GetChild(next_node_idx).gameObject.transform.position - node.transform.position;
 
-                            float num_segment = (lane_direction.magnitude / segment_scale - 1) / 2;
+                            float num_segment = (lane_direction.magnitude / Mathf.Abs(segments[0].transform.localScale.z) - 1) / 2;
 
                             if (segments.Count < (int)num_segment + 1)
                             {
@@ -342,7 +342,7 @@ public class LaneDrawerEditor : Editor
                             int k = 0;
                             foreach(GameObject lane in segments)
                             {
-                                lane.transform.position = node.transform.position + lane_direction/lane_direction.magnitude * lane.transform.localScale.z * (1 + 4 * k) / 2;
+                                lane.transform.position = node.transform.position + lane_direction/lane_direction.magnitude * Mathf.Abs(lane.transform.localScale.z) * (1 + 4 * k) / 2;
                                 lane.transform.rotation = Quaternion.LookRotation(lane_direction);
                                 lane.transform.localScale = new Vector3(lane.transform.localScale.x, lane.transform.localScale.y, lane.transform.localScale.z);
                                 k++;
@@ -352,7 +352,7 @@ public class LaneDrawerEditor : Editor
                         }
                         else
                         {
-                            throw new Exception("Check Segment object");
+                            throw new Exception("Check Segment object, it can be no segment!");
                         }
                     }
                     else if(i == parent_lane.transform.childCount - 1)      // 마지막 노드
@@ -370,7 +370,7 @@ public class LaneDrawerEditor : Editor
                         {
                             Vector3 lane_direction = node.transform.position - parent_lane.transform.GetChild(prev_node_idx).gameObject.transform.position;
 
-                            float num_segment = (lane_direction.magnitude / segment_scale - 1) / 2;
+                            float num_segment = (lane_direction.magnitude / Mathf.Abs(segments[0].transform.localScale.z) - 1) / 2;
 
                             if (segments.Count < (int)num_segment + 1)
                             {
@@ -389,7 +389,7 @@ public class LaneDrawerEditor : Editor
                             int k = 0;
                             foreach(GameObject lane in segments)
                             {
-                                lane.transform.position = parent_lane.transform.GetChild(prev_node_idx).gameObject.transform.position + lane_direction/lane_direction.magnitude * lane.transform.localScale.z * (1 + 4 * k) / 2;
+                                lane.transform.position = parent_lane.transform.GetChild(prev_node_idx).gameObject.transform.position + lane_direction/lane_direction.magnitude * Mathf.Abs(lane.transform.localScale.z) * (1 + 4 * k) / 2;
                                 lane.transform.rotation = Quaternion.LookRotation(lane_direction);
                                 lane.transform.localScale = new Vector3(lane.transform.localScale.x, lane.transform.localScale.y, lane.transform.localScale.z);
                                 k++;
@@ -418,7 +418,7 @@ public class LaneDrawerEditor : Editor
                         {
                             Vector3 lane_direction =  parent_lane.transform.GetChild(next_node_idx).gameObject.transform.position - node.transform.position;
 
-                            float num_segment = (lane_direction.magnitude / segment_scale - 1) / 2;
+                            float num_segment = (lane_direction.magnitude / Mathf.Abs(segments[0].transform.localScale.z) - 1) / 2;
 
                             if (segments.Count < (int)num_segment + 1)
                             {
@@ -437,7 +437,7 @@ public class LaneDrawerEditor : Editor
                             int k = 0;
                             foreach(GameObject lane in segments)
                             {
-                                lane.transform.position = node.transform.position + lane_direction/lane_direction.magnitude * lane.transform.localScale.z * (1 + 4 * k) / 2;
+                                lane.transform.position = node.transform.position + lane_direction/lane_direction.magnitude * Mathf.Abs(lane.transform.localScale.z) * (1 + 4 * k) / 2;
                                 lane.transform.rotation = Quaternion.LookRotation(lane_direction);
                                 lane.transform.localScale = new Vector3(lane.transform.localScale.x, lane.transform.localScale.y, lane.transform.localScale.z);
                                 k++;
@@ -462,7 +462,7 @@ public class LaneDrawerEditor : Editor
                         {
                             Vector3 lane_direction = node.transform.position - parent_lane.transform.GetChild(prev_node_idx).gameObject.transform.position;
 
-                            float num_segment = (lane_direction.magnitude / segment_scale - 1) / 2;
+                            float num_segment = (lane_direction.magnitude / Mathf.Abs(segments[0].transform.localScale.z) - 1) / 2;
 
                             if (segments.Count < (int)num_segment + 1)
                             {
@@ -481,7 +481,7 @@ public class LaneDrawerEditor : Editor
                             int k = 0;
                             foreach(GameObject lane in segments)
                             {
-                                lane.transform.position = parent_lane.transform.GetChild(prev_node_idx).gameObject.transform.position + lane_direction/lane_direction.magnitude * lane.transform.localScale.z * (1 + 4 * k) / 2;
+                                lane.transform.position = parent_lane.transform.GetChild(prev_node_idx).gameObject.transform.position + lane_direction/lane_direction.magnitude * Mathf.Abs(lane.transform.localScale.z) * (1 + 4 * k) / 2;
                                 lane.transform.rotation = Quaternion.LookRotation(lane_direction);
                                 lane.transform.localScale = new Vector3(lane.transform.localScale.x, lane.transform.localScale.y, lane.transform.localScale.z);
                                 k++;

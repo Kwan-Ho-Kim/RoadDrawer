@@ -2829,7 +2829,7 @@ MonoBehaviour:
   WhiteLane: {fileID: 1179286005403994565}
   YellowLane: {fileID: 1179286005101579793}
   Others: {fileID: 8401205937965947603}
-  Segments: {fileID: 1179286005101579793}
+  Segments: {fileID: 1381899221468057247}
   segment_scale: 4
 --- !u!4 &1320859137636864248
 Transform:

@@ -1,10 +1,7 @@
 {
-    "name": "RoadDrawer.Editor",
+    "name": "Kwanho.RoadDrawer",
     "rootNamespace": "",
-    "references": [
-        "GUID:f0be78c24ff99cdd2bd24bba4ca28ccd",
-        "GUID:21b0c8d1703a94250bfac916590cea4f"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

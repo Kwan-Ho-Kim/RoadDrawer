@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 using Unity.VisualScripting;
@@ -30,6 +29,7 @@ public class LaneDrawerEditor : Editor
     private bool node_active_check = false;
 
     public float segment_scale = 4.5f;
+
     
     void OnEnable()
     {
@@ -39,7 +39,12 @@ public class LaneDrawerEditor : Editor
         item4 = serializedObject.FindProperty("Segments");
         item5 = serializedObject.FindProperty("segment_scale");
 
-        
+        EditorTagLayerHelper.AddNewTag("node");
+        EditorTagLayerHelper.AddNewTag("lane");
+        EditorTagLayerHelper.AddNewTag("Segments");
+        EditorTagLayerHelper.AddNewTag("Others");
+        EditorTagLayerHelper.AddNewTag("Yellow lane");
+        EditorTagLayerHelper.AddNewTag("White lane");
         
 
     }

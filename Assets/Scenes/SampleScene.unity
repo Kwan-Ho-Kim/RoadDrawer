@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 200500510}
   - component: {fileID: 200500509}
   m_Layer: 0
-  m_Name: Terrain_(-1000.00, 0.00, 0.00)
+  m_Name: Terrain_TL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 1128886073}
   - component: {fileID: 1128886072}
   m_Layer: 0
-  m_Name: Terrain_(-1000.00, 0.00, -1000.00)
+  m_Name: Terrain_BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 1140115034}
   - component: {fileID: 1140115033}
   m_Layer: 0
-  m_Name: Terrain_(0.00, 0.00, -1000.00)
+  m_Name: Terrain_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 1367810817}
   - component: {fileID: 1367810816}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Terrain_TR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

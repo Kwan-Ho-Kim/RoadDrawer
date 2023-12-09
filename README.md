@@ -1,7 +1,7 @@
 # RoadDrawer
-To use RoadDrawer package, enter https://github.com/Kwan-Ho-Kim/RoadDrawer.git?path=/Assets/RoadDrawer at unity package manager.
+To use RoadDrawer package, enter `https://github.com/Kwan-Ho-Kim/RoadDrawer.git?path=/Assets/RoadDrawer` at unity package manager.
 
-[lane_creator_demo.webm](https://github.com/Kwan-Ho-Kim/RoadDrawer/assets/112551361/f2677f9d-f50f-4e02-a465-9821c92bdb31)
+<!-- [lane_creator_demo.webm](https://github.com/Kwan-Ho-Kim/RoadDrawer/assets/112551361/f2677f9d-f50f-4e02-a465-9821c92bdb31) -->
 
 The lane_creator prefab make creating road more efficient.
 Open the RoadCreateWindow by Tools/RoadCreate, click what you want to append in the scene.

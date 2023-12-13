@@ -71,7 +71,23 @@ public class LaneDrawerEditor : Editor
         Event currentEvent = Event.current;
 
         int lane_toolbar_index = RoadCreateWindow.Instance.lane_toolbar_index;
-        
+
+        if (lane_toolbar_index == 0)        // disable
+        {
+            foreach(GameObject tmp_node in nodes)
+            {
+                if (tmp_node.IsDestroyed())
+                {
+                    continue;
+                }
+                else
+                {
+                    DestroyImmediate(tmp_node);
+                }
+                
+            }
+            nodes.Clear();
+        }
 
         // 마우스 왼쪽 버튼을 클릭하고, 이벤트가 마우스 클릭인 경우:
         if (currentEvent.type == EventType.MouseDown && currentEvent.button == 0)
@@ -208,7 +224,6 @@ public class LaneDrawerEditor : Editor
             
             
         }
-        
 
     }
     
